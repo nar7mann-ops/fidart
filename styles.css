@@ -112,17 +112,23 @@ body {
   gap: 15px;
 }
 
+/* исправленные стили кнопок */
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.2);
   color: #fff;
-  padding: 12px 50px;
+  height: 55px;
   border-radius: 50px;
   font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
-  width: 220px;
+  width: 240px;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .btn:hover {
@@ -132,7 +138,7 @@ body {
 }
 
 .gmail-btn {
-  width: 280px;
+  width: 300px;
   background: linear-gradient(90deg, #0077ff, #00ffff);
   color: #000;
   font-weight: bold;
@@ -195,13 +201,21 @@ body {
   }
 
   .btn {
-    width: 80%;
-    max-width: 250px;
-    padding: 12px 0;
+    width: 85%;
+    height: 60px;
+    font-size: 1.1rem;
   }
 
   .gmail-btn {
+    width: 90%;
+    font-size: 1.15rem;
+    height: 65px;
+  }
+
+  .works-btn {
     width: 85%;
+    height: 60px;
+    font-size: 1.1rem;
   }
 
   .gallery img {
