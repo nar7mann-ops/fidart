@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ===== ВИДЕО ФОН ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* ===== КОНТЕНТ ===== */
+.container {
+  text-align: center;
+  padding: 10vh 20px 6vh;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== ПРИВЕТСТВИЕ ===== */
+.intro {
+  margin-bottom: 30px;
+}
+
+.hello {
+  font-size: 1.8rem;
+  color: #00ffff;
+  animation: glow-text 3s ease-in-out infinite alternate;
+}
+
+.about {
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 10px auto 0;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.highlight {
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+@keyframes glow-text {
+  from { text-shadow: 0 0 10px #00bfff; }
+  to { text-shadow: 0 0 30px #00ffff; }
+}
+
+/* ===== ГЛАВНОЕ ИМЯ ===== */
+.name-glow {
+  font-size: 3.5rem;
+  letter-spacing: 8px;
+  text-shadow: 0 0 25px #00bfff, 0 0 45px #00ffff;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 15px #00bfff; }
+  to { text-shadow: 0 0 35px #00ffff, 0 0 70px #00ffff; }
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: -5px;
+  margin-bottom: 40px;
+}
+
+/* ===== КНОПКИ ===== */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 220px;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff;
+  border-color: #00ffff;
+}
+
+.gmail-btn {
+  width: 280px;
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+  color: #000;
+  font-weight: bold;
+}
+
+.works-btn {
+  margin-top: 35px;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ===== СЕКЦИЯ РАБОТ ===== */
+.works {
+  margin-top: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.works.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.gallery img {
+  width: 240px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px #00ffff;
+}
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+@media (max-width: 768px) {
+  .name-glow {
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+  }
+
+  .hello {
+    font-size: 1.5rem;
+  }
+
+  .about {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 250px;
+    padding: 12px 0;
+  }
+
+  .gmail-btn {
+    width: 85%;
+  }
+
+  .gallery img {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+.hidden {
+  display: none;
+}
